@@ -4,7 +4,7 @@
   "description": "this is a webhook for line chatbot, SE-NPRU",
   "main": "index.js",
   "engines": {
-    "node": "10"
+    "node": "16"
   },
   "scripts": {
     "start": "node index.js",
