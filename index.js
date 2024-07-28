@@ -1,12 +1,12 @@
 const express = require('express');
-const { Client, middleware } = require('@line/bot-sdk');
 const bodyParser = require('body-parser');
+const { Client, middleware } = require('@line/bot-sdk');
 const { WebhookClient } = require('dialogflow-fulfillment');
 
 // LINE SDK Configuration
 const lineConfig = {
-  channelSecret: 'e362af76a52043e6cb7b54b73e61f01c',
-  channelAccessToken: '2CqaBRDmPN9CQvxrLF20z5DyvTVcHsFMJR9lmnwKeI6ybLB40GC5yF6kd1PxhDZ0tIAqtFDFxiKd9F8LYPyag038DRqL8USfZxeV6g8sl/4O3FrxzcV6Fv6vNIX+nejyCDQW1fgETwEa5W8/tdxzmQdB04t89/1O/w1cDnyilFU='
+  channelSecret: 'e362af76a52043e6cb7b54b73e61f01c',  // ใช้ค่าโดยตรงที่ได้
+  channelAccessToken: '2CqaBRDmPN9CQvxrLF20z5DyvTVcHsFMJR9lmnwKeI6ybLB40GC5yF6kd1PxhDZ0tIAqtFDFxiKd9F8LYPyag038DRqL8USfZxeV6g8sl/4O3FrxzcV6Fv6vNIX+nejyCDQW1fgETwEa5W8/tdxzmQdB04t89/1O/w1cDnyilFU='  // ใช้ค่าโดยตรงที่ได้
 };
 
 const lineClient = new Client(lineConfig);
@@ -91,6 +91,7 @@ app.post('/dialogflow', (req, res) => {
 });
 
 // Start server
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
