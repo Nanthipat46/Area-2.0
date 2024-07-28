@@ -1,7 +1,6 @@
 const express = require('express');
 const { Client, middleware } = require('@line/bot-sdk');
 const bodyParser = require('body-parser');
-const functions = require('firebase-functions');
 const { WebhookClient } = require('dialogflow-fulfillment');
 
 // LINE SDK Configuration
@@ -91,8 +90,7 @@ app.post('/dialogflow', (req, res) => {
   agent.handleRequest(intentMap);
 });
 
+// Start server
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
-
-exports.app = functions.https.onRequest(app);

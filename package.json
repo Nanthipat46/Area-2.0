@@ -1,7 +1,7 @@
 {
   "name": "line-webhook",
   "version": "1.0.0",
-  "description": "this is a webhook for line chatbot, SE-NPRU",
+  "description": "This is a webhook for LINE chatbot, SE-NPRU",
   "main": "index.js",
   "engines": {
     "node": "16"
@@ -20,8 +20,11 @@
   "license": "ISC",
   "dependencies": {
     "@line/bot-sdk": "^9.2.2",
-    "actions-on-google": "^2.2.0",
     "dialogflow-fulfillment": "^0.6.1",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "body-parser": "^1.20.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22" 
   }
 }
