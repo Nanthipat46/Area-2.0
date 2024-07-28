@@ -5,8 +5,8 @@ const { WebhookClient } = require('dialogflow-fulfillment');
 
 // LINE SDK Configuration
 const lineConfig = {
-  channelSecret: 'e362af76a52043e6cb7b54b73e61f01c',  // ใช้ค่าโดยตรงที่ได้
-  channelAccessToken: '2CqaBRDmPN9CQvxrLF20z5DyvTVcHsFMJR9lmnwKeI6ybLB40GC5yF6kd1PxhDZ0tIAqtFDFxiKd9F8LYPyag038DRqL8USfZxeV6g8sl/4O3FrxzcV6Fv6vNIX+nejyCDQW1fgETwEa5W8/tdxzmQdB04t89/1O/w1cDnyilFU='  // ใช้ค่าโดยตรงที่ได้
+  channelSecret: e362af76a52043e6cb7b54b73e61f01c,
+  channelAccessToken: process.env.2CqaBRDmPN9CQvxrLF20z5DyvTVcHsFMJR9lmnwKeI6ybLB40GC5yF6kd1PxhDZ0tIAqtFDFxiKd9F8LYPyag038DRqL8USfZxeV6g8sl/4O3FrxzcV6Fv6vNIX+nejyCDQW1fgETwEa5W8/tdxzmQdB04t89/1O/w1cDnyilFU=
 };
 
 const lineClient = new Client(lineConfig);
